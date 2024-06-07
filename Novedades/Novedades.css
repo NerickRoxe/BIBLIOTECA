@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.imagen {
+    margin-right: 10px;
+}
+
+.imagen img {
+    width: 180px; /* Reducir el tamaño del icono */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: right;
+}
+
+#fecha {
+    position: absolute; /* Cambiar a absolute */
+    left: 20px;
+    top: 150px;
+    width: 40px;
+    height: 50px;
+    background: url('../Cositos/Boton/fecha.png') no-repeat center center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.Generalidades {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Generalidades h1 {
+    color: red; /* Cambiar a color rojo */
+    font-size: 28px; /* Ajustar tamaño del título */
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center; /* Centrar el título */
+}
+
+.Generalidades section {
+    margin-bottom: 20px;
+}
+
+.Generalidades h2 {
+    color: black;
+    font-size: 32px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Generalidades p,
+.Generalidades li {
+    color: #000000;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Generalidades ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left; /* Alinear lista a la izquierda */
+}
+
+.Generalidades li {
+    margin-bottom: 10px;
+}
+
+/* Estilos adicionales para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 5px 0;
+}

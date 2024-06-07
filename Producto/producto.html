@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBLIOTECA WEB</title>
+    <link rel="stylesheet" href="../Inicio/index.css" />
+    <link rel="stylesheet" href="../Inicio/footer.css" />
+    <link rel="stylesheet" href="catalogo.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel ="stylesheet"  href="footer.css"/>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="../Inicio/index.html"> <img src="../Cositos/Icono/icono.png" alt="Logo de la marca" /> </a>
+      </div>
+      <h1 class="title">BIBLIOTECA ESCOLAR</h1>
+
+      <div class="container-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="icon-cart">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+        <div class="count-products">
+          <span id="contador-productos">0</span>
+        </div>
+      </div>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../Tienda/tienda.html">Tienda</a></li>
+          <li><a href="../Generalidades/Generalidades.html">Generalidades</a></li>
+          <li><a href="../Novedades/Novedades.html">Novedades</a></li>
+          <li><a href="../Reglamento/Reglamento.html">Reglamento</a></li>
+        </ul>
+      </nav>
+      <a class="btn" href="#"><button>Iniciar/Registrarte</button></a>
+    </header>
+    
+        <main>
+          <div class="container-img">
+            <img
+              src="../Cositos/libros/libro 1.jpeg"
+              alt="imagen-producto"
+            />
+          </div>
+          <div class="container-info-product">
+            <div class="container-price">
+              <span>$00.00</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+    
+            <div class="container-details-product">
+              <div class="form-group">
+                
+              </div>
+              <div class="form-group">
+              </div>
+    
+            </div>
+    
+            <div class="container-add-cart">
+              <div class="container-quantity">
+                <input
+                  type="number"
+                  placeholder="1"
+                  value="1"
+                  min="1"
+                  class="input-quantity"
+                />
+                <div class="btn-increment-decrement">
+                  <i class="fa-solid fa-chevron-up" id="increment"></i>
+                  <i class="fa-solid fa-chevron-down" id="decrement"></i>
+                </div>
+              </div>
+              <button class="btn-add-to-cart">
+                <i class="fa-solid fa-plus"></i>
+                Añadir al carrito
+              </button>
+            </div>
+    
+            <div class="container-description">
+              <div class="title-description">
+                <h4>Descripción</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="text-description">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing
+                  elit. Laboriosam iure provident atque voluptatibus
+                  reiciendis quae rerum, maxime placeat enim cupiditate
+                  voluptatum, temporibus quis iusto. Enim eum qui delectus
+                  deleniti similique? Lorem, ipsum dolor sit amet
+                  consectetur adipisicing elit. Sint autem magni earum est
+                  dolorem saepe perferendis repellat ipsam laudantium cum
+                  assumenda quidem quam, vero similique? Iusto officiis
+                  quod blanditiis iste?
+                </p>
+              </div>
+            </div>
+    
+            <div class="container-additional-information">
+              <div class="title-additional-information">
+                <h4>Información adicional</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="text-additional-information hidden">
+                <p>-----------</p>
+              </div>
+            </div>
+    
+            <div class="container-reviews">
+              <div class="title-reviews">
+                <h4>Reseñas</h4>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="text-reviews hidden">
+                <p>-----------</p>
+              </div>
+            </div>
+    
+            <div class="container-social">
+              <span>Compartir</span>
+              <div class="container-buttons-social">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </main>
+    
+        <section class="container-related-products">
+          <h2>LIbros que te pueden interesar</h2>
+          <div class="card-list-products">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="../Cositos/libros/libro 2.jpeg"
+                  alt="producto-1"
+                />
+              </div>
+              <div class="info-card">
+                <div class="text-product">
+                  <h3>Arte de las grandes civilizaciones antiguas: Egipto y proximo oriente</h3>
+                  <p class="category">Footwear, Sneakers</p>
+                </div>
+                <div class="price">$70.00</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="../Cositos/libros/libro 1.jpeg"
+                  alt="producto-2"
+                />
+              </div>
+              <div class="info-card">
+                <div class="text-product">
+                  <h3>Common Projects Achilles</h3>
+                  <p class="category">Footwear, Sneakers</p>
+                </div>
+                <div class="price">$255.00</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="../Cositos/libros/libro 3.jpeg"
+                  alt="producto-3"
+                />
+              </div>
+              <div class="info-card">
+                <div class="text-product">
+                  <h3>Adidas - Boston Super OG</h3>
+                  <p class="category">Footwear, Sneakers</p>
+                </div>
+                <div class="price">$105.00</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="../Cositos/libros/libro 2.jpeg"
+                  alt="producto-4"
+                />
+              </div>
+              <div class="info-card">
+                <div class="text-product">
+                  <h3>Common Projects Achilles</h3>
+                  <p class="category">Footwear, Sneakers</p>
+                </div>
+                <div class="price">$250.00</div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        <footer>
+          <div class="container">
+              <div class="sec aboutus">
+                  <h2>Sobre Nosotros</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempor bibendum tortor non bibendum. Sed maximus tellus tellus, id faucibus purus varius non. Maecenas non consectetur tellus. Praesent cursus mi nibh, id venenatis nunc elementum sed. Suspendisse imperdiet nec ex eleifend ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
+    
+                  <ul class="sci">
+                      <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-twitter"></i></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-instagram"></i></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-twitch"></i></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-youtube"></i></i></a></li>
+                      <li><a href="#"><i class="fa-brands fa-discord"></i></i></a></li>
+                  </ul>
+              </div>
+              <div class="sec quickLinks">
+                  <h2>Otros Links</h2>
+                  <ul>
+                      <li><a href="about.html">Nosotros</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Politica De Privacidad</a></li>
+                      <li><a href="#">Ayuda</a></li>
+                      <li><a href="#">Terminos Y Condiciones</a></li>
+                      <li><a href="#">Contactanos</a></li>
+                  </ul>
+              </div>
+              <div class="sec contact">
+                  <h2>Información De Contacto</h2>
+                  <ul class="info">
+                      <li>
+                          <span><i class="fa-solid fa-location-dot"></i></span>
+                          <span>Instituto tecnologico superior de huatusco<br>
+                          huatusco, VER 12345,<br>MEX</span>
+                      </li>
+                      <li>
+                          <span><i class="fa-solid fa-phone"></i></span>
+                          <p><a href="tel:2731329128">+52 273 132 9128</a><br>
+                          <a href="tel:2731329128">+52 273 132 9128</a></p>
+                      </li>
+                  </ul>
+              </div>
+      </footer>
+    
+        <script
+          src="https://kit.fontawesome.com/81581fb069.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
+      </body>
+    </html>
+    

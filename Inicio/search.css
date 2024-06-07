@@ -1,0 +1,35 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alineamos horizontalmente */
+    margin-right: 20px; /* Ajustamos el margen derecho */
+    margin-top: 10px; /* Añadimos un margen superior */
+    margin-bottom: 10px; /* Añadimos un margen inferior */
+}
+
+/* Estilo para el campo de entrada de texto */
+.search-bar input[type="text"] {
+    padding: 12px; /* Añade relleno alrededor del campo de entrada */
+    border: none; /* Elimina el borde del campo de entrada */
+    border-radius: 25px; /* Añade esquinas redondeadas al campo de entrada */
+    width: 600px; /* Establece un ancho fijo para el campo de entrada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra suave al campo de entrada */
+    outline: none; /* Elimina el contorno al enfocar el campo de entrada */
+}
+
+/* Estilo para el botón de búsqueda */
+.search-bar button {
+    padding: 12px 20px; /* Añade relleno alrededor del botón */
+    background-color: #007bff; /* Establece un color de fondo para el botón */
+    color: #fff; /* Establece el color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 25px; /* Añade esquinas redondeadas al botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra suave al botón */
+    transition: background-color 0.3s; /* Agrega una transición al color de fondo del botón */
+}
+
+/* Cambia el color de fondo del botón al pasar el mouse */
+.search-bar button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón al pasar el mouse */
+}

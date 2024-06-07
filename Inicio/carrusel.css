@@ -1,0 +1,47 @@
+.contenedor2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1900px;
+    margin: 20px auto;
+    color: rgb(4, 5, 5);
+    padding: 20px;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 1000px;
+    /* Ancho máximo del carrusel */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    align-items: center;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    max-width: 100%;
+    /* Ajustamos el ancho máximo al 100% */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}

@@ -1,0 +1,50 @@
+/* Estilo para el video de fondo */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+/* Estilo para el contenedor del video */
+.videoR {
+    position: relative;
+    width: 1100px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto; /* Centra horizontalmente el contenedor del video */
+}
+
+/* Estilo para el video dentro del div */
+.videoR video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1100px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: none;
+    transition: transform 4s linear; /* Agrega una transición de 4 segundos para la rotación */
+}
+
+/* Efecto de rotación */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg); /* Define el punto inicial de la rotación */
+    }
+    to {
+        transform: rotate(-360deg); /* Define el punto final de la rotación */
+    }
+}
+
+/* Aplicar la animación de rotación al video */
+.videoR video:hover {
+    animation: rotate infinite; /* Haz que la rotación sea infinita */
+}
+

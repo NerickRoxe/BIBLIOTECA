@@ -1,0 +1,172 @@
+/* Estilos para el contenedor 1 */
+.titulo {
+    margin: 20px auto;
+    /* Agrega espacio arriba y abajo y alinea horizontalmente */
+    width: fit-content;
+    /* Establece el ancho del título según su contenido */
+    color: #fff;
+}
+
+.contenedor1 {
+    display: grid;
+    /* Cambiamos el display a grid */
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas de igual ancho */
+    grid-auto-rows: auto;
+    /* Altura automática de las filas */
+    grid-gap: 1px;
+    /* Espacio entre cada elemento */
+    font-family: 'Avenir Next LT Pro';
+    font-weight: bold;
+    width: 1100px;
+    /* Reducir el ancho al 80% del contenedor padre */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    height: 600px;
+    /* Reducir la altura a 400px */
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor1 {
+        width: 90%;
+        /* Reducir el ancho al 90% en dispositivos más pequeños */
+        height: auto;
+        /* Permitir que la altura se ajuste automáticamente */
+    }
+}
+
+/* Estilos para cada libro dentro del contenedor 1 */
+.contenedor1 .libro {
+    display: flex;
+    flex-direction: column;
+    /* Apila los elementos verticalmente */
+    justify-content: center;
+    /* Centra los elementos verticalmente */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    gap: 20px;
+    /* Espacio entre cada div */
+    padding: 20px;
+    /* Agregar espacio alrededor de cada tarjeta */
+    border: 2px solid #ccc;
+    /* Agregar borde */
+    border-radius: 10px;
+    /* Añadir bordes redondeados */
+    background-color: #fff;
+    /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    transition: transform 0.3s ease;
+    /* Agregar transición suave */
+}
+
+/* Estilos para las imágenes dentro de cada libro */
+.contenedor1 .libro img {
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+    border-radius: 8px;
+    /* Añadir bordes redondeados a las imágenes */
+}
+
+/* Estilos para el texto debajo de cada imagen */
+.contenedor1 .libro p {
+    margin: 0;
+    /* Elimina el margen por defecto */
+}
+
+/* Efecto de hover */
+.contenedor1 .libro:hover {
+    transform: translateY(-5px);
+    /* Levantar un poco la tarjeta al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Añadir una sombra más grande */
+}
+
+.contenedor3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1900px;
+    margin: 20px auto;
+    color: rgb(4, 5, 5);
+    padding: 20px;
+}
+
+.item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 1100px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombras más pronunciadas al hacer hover */
+    cursor: pointer;
+    /* Cambio de cursor al hacer hover */
+}
+
+.item:hover .content {
+    transform: translateX(10px);
+    /* Desplazamiento horizontal al hacer hover */
+}
+
+/* Añadir un efecto de transición para el desplazamiento horizontal */
+.item .content {
+    transition: transform 0.3s ease;
+}
+
+
+.item img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    /* Agregado margen inferior para separar la imagen del párrafo */
+}
+
+.item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0b0a0a;
+    /* Cambiado color del h2 */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    letter-spacing: 1px;
+    /* Aumentar el espaciado entre letras */
+}
+
+.item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    /* Ajustar el espaciado entre líneas */
+    text-align: justify;
+}
+
+.item .content {
+    display: flex;
+}
+
+.item .text {
+    margin-left: 20px;
+}
+
+.item .text ul {
+    margin-left: 20px;
+}
+
+.item .text ul li {
+    list-style-type: disc;
+}
