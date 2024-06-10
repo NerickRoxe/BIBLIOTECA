@@ -39,43 +39,43 @@ include_once("conexion.php")
                     <div>
                         <label>
                             <i class='bx bx-user'></i>
-                            <input type="Matricula" placeholder="Matricula" name="Matricula">
+                            <input type="Matricula" placeholder="Matricula" name="userMatricula">
                         </label>
                     </div>
                     <div>
                         <label>
                             <i class='bx bx-user'></i>
-                            <input type="text" placeholder="Nombre" name="Name">
+                            <input type="Name" placeholder="Nombre" name="userName">
                         </label>
                     </div>
                     <div>
                         <label>
                             <i class='bx bx-user'></i>
-                            <input type="Carrera" placeholder="Carrera" name="Carrera">
+                            <input type="Carrera" placeholder="Carrera" name="userCarrera">
                         </label>
                     </div>
                     <div>
                         <label>
                             <i class='bx bx-user'></i>
-                            <input type="Grado" placeholder="Grado" name="Grado">
+                            <input type="Grado" placeholder="Grado" name="userGrado">
                         </label>
                     </div>
                     <div>
                         <label>
                             <i class='bx bx-phone'></i>
-                            <input type="Phone" placeholder="Telefono" name="phone">
+                            <input type="Phone" placeholder="Telefono" name="userPhone">
                         </label>
                     </div>
                     <div>
                         <label>
                             <i class='bx bx-envelope'></i>
-                            <input type="email" placeholder="Correo Electronico" name="Email">
+                            <input type="Email" placeholder="Correo Electronico" name="userEmail">
                         </label>
                     </div>
                     <div>
                         <label>
                             <i class='bx bx-lock-alt'></i>
-                            <input type="password" placeholder="Contraseña" name="Password">
+                            <input type="Password" placeholder="Contraseña" name="userPassword">
                         </label>
                     </div>
 
@@ -108,14 +108,14 @@ include_once("conexion.php")
                 <form class="form form-login" novalidate>
                     <div>
                         <label>
-                            <i class='bx bx-envelope'></i>
-                            <input type="Matricula" placeholder="Matricula" name="Matricula">
+                            <i class='bx bx-user'></i>
+                            <input type="Matricula" placeholder="Matricula" name="userMatricula">
                         </label>
                     </div>
                     <div>
                         <label>
                             <i class='bx bx-lock-alt'></i>
-                            <input type="password" placeholder="Contraseña" name="Password">
+                            <input type="Password" placeholder="Contraseña" name="userPassword">
                         </label>
                     </div>
                     <input type="submit" value="Iniciar Sesión">
@@ -127,8 +127,9 @@ include_once("conexion.php")
     </div>
     <script src="js/script.js"></script>
     <script src="js/register.js" type="module"></script>
-    <script src="js/iffe_login.js"></script>
-    <script src="js/login_modulo.js" type="module"></script>
+    <!-- <script src="js/login_modulo.js" type="module"></script> -->
+    <script src="js/iffe_login.js" type="module"></script>
+
 </body>
 
 </html>

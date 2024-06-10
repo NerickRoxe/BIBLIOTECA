@@ -1,71 +1,69 @@
 const formRegister = document.querySelector(".form-register");
-
-export const inputMatricula = document.querySelector('.form-register input[type="Matricula"]');
-const inputUser = document.querySelector('.form-register input[type="text"]');
-const inputCarrera = document.querySelector('.form-register input[type="Carrera"]');
-const inputGrado = document.querySelector('.form-register input[type="Grado"]');
-const inputPhone = document.querySelector('.form-register input[type="Phone"]');
-const inputPass = document.querySelector('.form-register input[type="password"]');
-const inputEmail = document.querySelector('.form-register input[type="email"]');
-
+const inputMatricula = document.querySelector('.form-login input[name="userMatricula"]');
+const inputUser = document.querySelector('.form-register input[name="userName"]');
+const inputCarrera = document.querySelector('.form-register input[name="userCarrera"]');
+const inputGrado = document.querySelector('.form-register input[name="userGrado"]');
+const inputPhone = document.querySelector('.form-register input[name="userPhone"]');
+const inputPass = document.querySelector('.form-register input[name="userPassword"]');
+const inputEmail = document.querySelector('.form-register input[name="userEmail"]');
 const alertaError = document.querySelector(".form-register .alerta-error");
 const alertaExito = document.querySelector(".form-register .alerta-exito");
 
-export const MatriculaRegex = /^[0-9]{3}z[0-9]{4}$/;
-const NameRegex = /^[a-zA-Z0-9\_\-]{4,16}$/;
-const CarreraRegex = /^[a-zA-Z]+$/;
-const GradoRegex = /^[0-9][a-zA-Z]{1,1}$/;
-const PhoneRegex = /^[0-9]{10}$/;
-const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-export const passwordRegex = /^.{4,12}$/;
+const MatriculaRegex = /^[0-9]{3}z[0-9]{4}$/;
+const userNameRegex = /^[a-zA-Z0-9\_\-]{4,16}$/;
+const userCarreraRegex = /^[a-zA-Z]+$/;
+const userGradoRegex = /^[0-9][a-zA-Z]{1,1}$/;
+const userPhoneRegex = /^[0-9]{10}$/;
+const userEmailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+const PasswordRegex = /^.{4,12}$/;
 
-export  const estadoValidacionCampos = {
-  Matricula: false,
-  Name: false,
-  carrera: false,
-  Grado: false,
-  Phone: false,
-  Email: false,
-  Password: false,
+const estadoValidacionCampos = {
+  userMatricula: false,
+  userName: false,
+  userCarrera: false,
+  userGrado: false,
+  userPhone: false,
+  userEmail: false,
+  userPassword: false,
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   formRegister.addEventListener("submit", (e) => {
     e.preventDefault();
-    enviarFormulario(formRegister,alertaError,alertaExito);
+    enviarFormulario(formRegister, alertaError, alertaExito);
   });
 
-  inputMatricula.addEventListener("input",() => {
-    validarCampo(MatriculaRegex,inputMatricula,"La matricula deben ser conforma por 3 numero primero, seguido de z y despues seguido de 4 numeros.");
+  inputMatricula.addEventListener("input", () => {
+    validarCampo(MatriculaRegex, inputMatricula, "La matricula debe tener el formato correcto.");
   });
 
   inputUser.addEventListener("input", () => {
-    validarCampo(NameRegex,inputUser,"El usuario tiene que ser de 4 a 16 dígitos y solo puede contener, letras y guión bajo.");
+    validarCampo(userNameRegex, inputUser, "El usuario debe contener de 4 a 16 caracteres alfanuméricos, guiones bajos y guiones.");
   });
 
-  inputCarrera.addEventListener("input",() => {
-    validarCampo(CarreraRegex,inputCarrera,"no se admiten numeros");
+  inputCarrera.addEventListener("input", () => {
+    validarCampo(userCarreraRegex, inputCarrera, "La carrera solo puede contener letras.");
   });
 
-  inputGrado.addEventListener("input",() => {
-    validarCampo(GradoRegex,inputGrado,"escribe el nivel seguido de tu grupo poe ejmplo 6A");
+  inputGrado.addEventListener("input", () => {
+    validarCampo(userGradoRegex, inputGrado, "El grado debe tener un formato específico, por ejemplo: 6A.");
   });
 
-  inputPhone.addEventListener("input",() => {
-    validarCampo(PhoneRegex,inputPhone,"Solo se admiten numeros.");
+  inputPhone.addEventListener("input", () => {
+    validarCampo(userPhoneRegex, inputPhone, "El teléfono debe contener 10 números.");
   });
 
   inputEmail.addEventListener("input", () => {
-    validarCampo(emailRegex,inputEmail,"El correo solo puede contener letras, números, puntos, guiones y guíon bajo.");
+    validarCampo(userEmailRegex, inputEmail, "El correo electrónico debe tener un formato válido.");
   });
 
   inputPass.addEventListener("input", () => {
-    validarCampo(passwordRegex,inputPass,"La contraseña tiene que ser de 4 a 12 dígitos");
+    validarCampo(PasswordRegex, inputPass, "La contraseña debe tener entre 4 y 12 caracteres.");
   });
 });
 
-export function validarCampo(regularExpresion, campo, mensaje) {
-  const validarCampo= regularExpresion.test(campo.value);
+function validarCampo(regularExpresion, campo, mensaje) {
+  const validarCampo = regularExpresion.test(campo.value);
   if (validarCampo) {
     eliminarAlerta(campo.parentElement.parentElement);
     estadoValidacionCampos[campo.name] = true;
@@ -75,10 +73,10 @@ export function validarCampo(regularExpresion, campo, mensaje) {
 
   estadoValidacionCampos[campo.name] = false;
   campo.parentElement.classList.add("error");
-  mostrarAlerta(campo.parentElement.parentElement,mensaje);
+  mostrarAlerta(campo.parentElement.parentElement, mensaje);
 }
 
-function mostrarAlerta(referencia,mensaje) {
+function mostrarAlerta(referencia, mensaje) {
   eliminarAlerta(referencia);
   const alertaDiv = document.createElement("div");
   alertaDiv.classList.add("alerta");
@@ -92,39 +90,28 @@ function eliminarAlerta(referencia) {
   if (alerta) alerta.remove();
 }
 
-export function enviarFormulario(form, alertaError,alertaExito) {
-  //VALIDAMOS EL ENVIO DE NUESTRO FORMULARIO
+function enviarFormulario(form, alertaError, alertaExito) {
+  const formData = new FormData(form);
 
-  if (estadoValidacionCampos.Matricula && 
-    estadoValidacionCampos.Name && 
-    estadoValidacionCampos.carrera &&
-    estadoValidacionCampos.Grado &&
-    estadoValidacionCampos.Phone &&
-    estadoValidacionCampos.Email && 
-    estadoValidacionCampos.Password) 
-    
-    {
-    //Se agregó estas 3 líneas de código que evitan un error al mostrar las alertas , lo que hacen es resetear los valores del objeto
-    estadoValidacionCampos.Matricula = false;
-    estadoValidacionCampos.Name = false;
-    estadoValidacionCampos.carrera = false;
-    estadoValidacionCampos.Grado = false;
-    estadoValidacionCampos.Phone = false;
-    estadoValidacionCampos.Email = false;
-    estadoValidacionCampos.Password = false;
-
-    form.reset();
-    alertaExito.classList.add("alertaExito");
-    alertaError.classList.remove("alertaError");
+  fetch('Registro_usuario.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      alertaExito.classList.add("alertaExito");
+      form.reset();
+      setTimeout(() => {
+        alertaExito.classList.remove("alertaExito");
+      }, 3000);
+    } else {
+      throw new Error('Error al enviar datos del formulario');
+    }
+  })
+  .catch(error => {
+    alertaError.classList.add("alertaError");
     setTimeout(() => {
-      alertaExito.classList.remove("alertaExito");
-    }, 3000); 
-    return;
-  }
-  
-  alertaExito.classList.remove("alertaExito");
-  alertaError.classList.add("alertaError");
-  setTimeout(() => {
-    alertaError.classList.remove("alertaError");
-  }, 3000);
+      alertaError.classList.remove("alertaError");
+    }, 3000);
+  });
 }

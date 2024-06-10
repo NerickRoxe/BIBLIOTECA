@@ -5,14 +5,14 @@ include 'conexion.php';
 // Verificar si se recibieron datos del formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los valores de los campos del formulario
-    $matricula = $_POST['Matricula'];
-    $nombre = $_POST['Name'];
-    $carrera = $_POST['Carrera'];
-    $grado = $_POST['Grado'];
-    $telefono = $_POST['Phone'];
-    $correo = $_POST['Email'];
-    $contraseña = $_POST['Password'];
-
+    $matricula = $_POST['userMatricula'];
+    $nombre = $_POST['userName'];
+    $carrera = $_POST['userCarrera'];
+    $grado = $_POST['userGrado'];
+    $telefono = $_POST['userPhone'];
+    $correo = $_POST['userEmail'];
+    $contraseña = $_POST['userPassword'];
+    
     try {
         // Preparar la consulta
         $query = "INSERT INTO registro (matricula, nombre, carrera, grado, telefono, correo, contraseña) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -22,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute([$matricula, $nombre, $carrera, $grado, $telefono, $correo, $contraseña]);
 
         // Redireccionar al usuario después de insertar los datos
-        echo '<script>alert("Usuario almacenado exitosamente"); window.location = "../registro.php";</script>';
+        echo '<script>alert("Usuario almacenado exitosamente"); window.location = "../index.php";</script>';
     } catch (PDOException $e) {
         // Mostrar mensaje de error en caso de fallo en la consulta
-        echo '<script>alert("Error al insertar usuario: ' . $e->getMessage() . '"); window.location = "../registro.php";</script>';
+        echo '<script>alert("Error al insertar usuario: ' . $e->getMessage() . '"); window.location = "../index.php";</script>';
     }
 }
 
