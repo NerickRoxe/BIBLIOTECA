@@ -1,7 +1,7 @@
 footer {
-    background-color: rgba(163, 142, 140, 1);
+    background-color: rgba(199, 238, 243, 0.863);
     padding: 40px 0;
-    color: #ffffff;
+    color: #1a1717;
     font-size: 14px;
     text-align: center;
 }
@@ -42,7 +42,7 @@ footer {
 }
 
 .sci li a {
-    color: #333;
+    color: #1a1717;
     font-size: 20px;
 }
 
@@ -57,7 +57,7 @@ footer {
 }
 
 .quickLinks li a {
-    color: #333;
+    color: #1a1717;
     text-decoration: none;
 }
 
@@ -78,7 +78,7 @@ footer {
 }
 
 .contact .info li a {
-    color: #333;
+    color: #1a1717;
     text-decoration: none;
 }
 
@@ -89,7 +89,7 @@ footer {
 }
 
 .logoBottom {
-    color: #333;
+    color: #1a1717;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -109,7 +109,7 @@ footer {
 }
 
 .dropdown-menu a {
-    color: #333;
+    color: #1a1717;
     padding: 12px 16px;
     text-decoration: none;
     display: block;

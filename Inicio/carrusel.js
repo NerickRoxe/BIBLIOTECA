@@ -2,18 +2,33 @@ document.addEventListener('DOMContentLoaded', function () {
   const carousel = document.querySelector('.carousel');
   const inner = carousel.querySelector('.carousel-inner');
   const items = carousel.querySelectorAll('.carousel-item');
-  const controls = carousel.querySelectorAll('.carousel-control');
 
   let currentIndex = 0;
+  const totalItems = items.length;
+  const intervalTime = 3000; // Tiempo en milisegundos entre cada cambio de imagen
+  let timer; // Variable para almacenar el temporizador
 
-  controls.forEach(control => {
-    control.addEventListener('click', function () {
-      if (this.classList.contains('prev')) {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-      } else {
-        currentIndex = (currentIndex + 1) % items.length;
-      }
-      inner.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-  });
+  // Función para cambiar la imagen del carrusel
+  function changeSlide() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  // Iniciar el carrusel automáticamente
+  function startCarousel() {
+    timer = setInterval(changeSlide, intervalTime);
+  }
+
+  // Detener el carrusel
+  function stopCarousel() {
+    clearInterval(timer);
+  }
+
+  // Iniciar el carrusel cuando la página se haya cargado
+  startCarousel();
+
+  // Detener el carrusel cuando el cursor esté sobre el carrusel
+  carousel.addEventListener('mouseenter', stopCarousel);
+  // Reanudar el carrusel cuando el cursor salga del carrusel
+  carousel.addEventListener('mouseleave', startCarousel);
 });
